@@ -21,12 +21,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>uk.ac.nactem</groupId>
+		<artifactId>nactem-parent-pom</artifactId>
+		<version>1.0</version>
+	</parent>
+	
 	<groupId>uk.ac.nactem.tools</groupId>
 	<artifactId>sentence-splitter</artifactId>
 	<version>1.0</version>
+	
 	<name>Sentence Splitter</name>
 	<inceptionYear>2017</inceptionYear>
 	<description>Sentence splitter with output compatible with Scott Piao's version</description>
+	<url>https://github.com/nactem/sentence-splitter</url>
 	<organization>
 		<name>The National Centre for Text Mining (NaCTeM)</name>
 		<url>http://nactem.ac.uk</url>
@@ -40,6 +49,20 @@
 			<comments>GNU Lesser General Public License v3.0</comments>
 		</license>
 	</licenses>
+	
+	<developers>
+		<developer>
+			<organization>NaCTeM</organization>
+			<organizationUrl>http://nactem.ac.uk</organizationUrl>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git://github.com/nactem/sentence-splitter</connection>
+		<developerConnection>scm:git:git@github.com:nactem/sentence-splitter.git</developerConnection>
+		<url>https://github.com/nactem/sentence-splitter</url>
+		<tag>HEAD</tag>
+	</scm>
 
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -90,15 +113,6 @@
 					<noticeTemplate>src/license/NOTICE.template</noticeTemplate>
 					<generateChildNotices>false</generateChildNotices>
 				</configuration>
-				<executions>
-					<execution>
-						<id>generate-notice</id>
-						<phase>initialize</phase>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 		</plugins>
 	</build>
